@@ -1,0 +1,26 @@
+.nav{
+  background-color: #58b677d5;
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100px
+    
+}
+.nav button{
+  
+  background-color: #54a06dc9;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+ 
+  
+}
+.nav button:hover{
+  background-color: #54a06d;
+}
+.nav button:active{
+  background-color: #3f7952;
+}

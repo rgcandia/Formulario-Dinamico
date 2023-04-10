@@ -1,0 +1,41 @@
+
+.App{
+    font-family: 'Roboto', sans-serif;
+    background-color: #58b677d5;
+    color: aliceblue;
+    height: 100vh;
+    width: 100vw;
+    
+   
+}
+
+.lista{
+    padding: 25px;
+    color: black;
+    
+}
+.ingresar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+   
+}
+.btnPrincipal {
+  background-color: #58b677be;
+    color: #000000;
+    padding: 10px 20px;
+    border:none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .btnPrincipal:hover {
+    background-color: #58b677;
+  }
+  
+  .btnPrincipal:active {
+    background-color: #4e9967;
+  }
+  
