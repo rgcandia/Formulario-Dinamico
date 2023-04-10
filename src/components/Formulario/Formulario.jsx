@@ -35,6 +35,8 @@ const  Formulario = ()=>{
                 alert("Se envió el Formulario")
                 console.log(form)
                 sendForm(form)
+                document.getElementById("myForm").reset();
+                setForm([])
                 break;
              }
             
@@ -86,7 +88,7 @@ const  Formulario = ()=>{
     <div 
     className={style.formulario}>
         <Nav/>
-        <form>
+        <form id='myForm'>
         {items.map((item=>{
             return  printInput(item,handleInput)
             
