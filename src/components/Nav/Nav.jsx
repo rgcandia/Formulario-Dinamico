@@ -8,6 +8,9 @@ return(<div className={style.nav}>
     <h1>Formulario Dinámico</h1>
     
 </div>
+<div>
 <button onClick={()=>{navigate("/")}}>&#8592; Atras</button>
+<button>Consulta</button>
+</div>
 </div>)
 }
