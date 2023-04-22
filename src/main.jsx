@@ -9,6 +9,7 @@ import {
 import App from './components/App/App'
 import Formulario from './components/Formulario/Formulario'
 import ConsultaFormulario from './components/ConsultaFormulario/ConsultaFormulario'
+import PrintForm from './components/PrintForm/PrintForm.jsx'
 import './main.css'
 import {store} from './Redux/store.js'
 import { Provider } from 'react-redux'
@@ -22,6 +23,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Route path='/' element={<App />}/>
       <Route path='/formulario' element={<Formulario/>}/>
       <Route path='/consulta' element={<ConsultaFormulario/>}/>
+      <Route path='/send'  element={<PrintForm/>}/>
     </Routes>
     </Provider>
     

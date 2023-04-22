@@ -4,8 +4,13 @@ const {items} = dataBase;
 import Nav from '../Nav/Nav.jsx'
 import { useState } from 'react';
 import {sendForm} from '../../services/firestore.js'
+import {setForm as addForm} from '../../Redux/formSlice'
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 const  Formulario = ()=>{
-  const [form,setForm] = useState([]);
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
+   const [form,setForm] = useState([]);
 
     const handlerSetForm = ({value,name,type})=>{
        form.some((el)=>{
@@ -35,8 +40,10 @@ const  Formulario = ()=>{
                 alert("Se envió el Formulario")
                 console.log(form)
                 sendForm(form)
+                dispatch(addForm(form))
                 document.getElementById("myForm").reset();
                 setForm([])
+                navigate('/send')
                 break;
              }
             

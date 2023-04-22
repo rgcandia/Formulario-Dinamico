@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState ={
 forms:[],
 name:null,
+form:null,
 }
 
 export const formSlice =  createSlice({
@@ -13,10 +14,13 @@ export const formSlice =  createSlice({
         },
         setName:(state,action)=>{
             state.name=action.payload
-        }
+        },
+        setForm:(state,action)=>{
+            state.form=action.payload
+        },
 
     }
 })
 
-export const {setForms,setName} = formSlice.actions
+export const {setForms,setName,setForm} = formSlice.actions
 export default formSlice.reducer;

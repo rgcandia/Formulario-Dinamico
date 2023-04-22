@@ -4,9 +4,8 @@ import style from './ConsultaFormulario.module.css'
 import {getForms} from '../../services/firestore.js'
 import {setForms,setName} from '../../Redux/formSlice.js'
 import { useDispatch,useSelector } from 'react-redux';
-
 const ConsultaFormulario = ()=>{
-    const {forms} = useSelector(state=>state.data)
+    const {forms,name} = useSelector(state=>state.data)
     const dispatch = useDispatch();
     const [state,setState] = useState(null);
     const inputRef = useRef(null)
@@ -30,8 +29,6 @@ const ConsultaFormulario = ()=>{
         <Nav/>
        <div className={style.consulta}>
         <h1>Consulta de Formularios</h1>
-       
-        
         <label>Email</label>
         <br/>
         <input 
@@ -39,7 +36,8 @@ const ConsultaFormulario = ()=>{
         onChange={handleInput}
         onKeyDown={handleEnter}
         ></input>
-        
+        <br/>
+        {name?<h3> El email <b>{name}</b>  tiene <b>{forms.length}</b> formularios  en la base de datos</h3>:null}
         </div> 
     </div>)
 }
