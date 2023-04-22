@@ -18,6 +18,16 @@ export const sendForm = async (form)=>{
 }
 // retorna un array  con los formularios enviados por el email que queramos.
 export const getForms = async (email)=>{
-    const forms = await getDocs(collection(db,email));
-    console.log("Cantidad de  formularios enviados"+forms.length)
+    try {
+        const array = [];
+        const forms = await getDocs(collection(db,email));
+         forms.forEach((doc)=>{
+            array.push(doc.data())
+         })
+        console.log(`Cantidad de  formularios enviados por ${email} : `+array.length)
+        return  array;
+    } catch (error) {
+        
+    }
+   
 }

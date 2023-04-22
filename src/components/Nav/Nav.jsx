@@ -9,8 +9,9 @@ return(<div className={style.nav}>
     
 </div>
 <div>
-<button onClick={()=>{navigate("/")}}>&#8592; Atras</button>
-<button>Consulta</button>
+<button onClick={()=>{navigate("/")}}>&#8592; Inicio</button>
+<button onClick={()=>{navigate("/consulta")}}>Consulta</button>
+<button  onClick={()=>{navigate("/formulario")}}>Formulario</button>
 </div>
 </div>)
 }
